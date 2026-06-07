@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roota — Designing for Belonging | Yani Xie, Master's Thesis</title>
+<meta name="description" content="Roota: a mobile concept helping newly immigrant families discover and join local community activities in Australia. UX master's thesis by Yani Xie, University of Melbourne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Roota home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7.5" r="4" fill="#fff"/><path d="M12 11.5V20M12 20l-5 1M12 20l5 1M12 20v0" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      Roota
+    </a>
+    <nav class="nav-links" aria-label="Section navigation">
+      <a href="#abstract">Abstract</a>
+      <a href="#research">Research</a>
+      <a href="#insights">Insights</a>
+      <a href="#design">Design</a>
+      <a href="#evaluation">Evaluation</a>
+      <a href="#reflection">Reflection</a>
+    </nav>
+    <a class="nav-cta" href="https://www.youtube.com/watch?v=joNYzxNZK2I" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      Watch the walkthrough
+    </a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO + TITLE BLOCK ============ -->
+<section id="top" class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="hero-kicker"><span class="pin"></span>Master of Information Technology · Human–Computer Interaction</span>
+        <h1>Helping newly immigrant families put down <em>roots</em> in their community.</h1>
+        <p class="hero-sub">Roota is a mobile concept that helps newly arrived families in Australia discover, understand, and confidently join local community activities — designed around the moment <em>after</em> you find out an event exists.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#abstract">Read the report<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="#design">See the design</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal" data-d="2">
+        <div class="phone-cluster">
+          <div class="phone phone--md cluster-a"><img src="screens/n01.png" alt="Roota scenario-simulation preview screen showing an illustrated park scene" loading="eager"></div>
+          <div class="phone phone--lg cluster-b"><img src="screens/n16.png" alt="Roota home screen with nearby community activities" loading="eager"></div>
+          <div class="phone phone--md cluster-c"><img src="screens/n18.png" alt="Roota activity details screen with an event timeline" loading="eager"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- mandatory title block -->
+    <div class="titleblock reveal">
+      <div class="titleblock-grid">
+        <div>
+          <p class="eyebrow">Thesis</p>
+          <dl class="meta-list">
+            <div class="meta-row"><dt>Title</dt><dd><span class="nm">Roota — Designing for Belonging:</span><br>Helping newly immigrant families discover and participate in local community activities in Australia</dd></div>
+            <div class="meta-row"><dt>Author</dt><dd><span class="nm">Yani Xie</span></dd></div>
+            <div class="meta-row"><dt>Date</dt><dd>June 2026</dd></div>
+            <div class="meta-row"><dt>Institution</dt><dd>The University of Melbourne<br>Faculty of Engineering and Information Technology<br>School of Computing and Information Systems</dd></div>
+            <div class="meta-row"><dt>Degree</dt><dd class="submission-note">Submitted in partial fulfilment of the degree of Master of Information Technology (Human–Computer Interaction)</dd></div>
+            <div class="meta-row"><dt>Supervisor</dt><dd>Dr. Arzoo Atiq</dd></div>
+            <div class="meta-row"><dt>Collaboration</dt><dd>Field research and the usability evaluation were conducted collaboratively with <strong>Zhe Xu</strong>. This report presents the project from the author's perspective.</dd></div>
+          </dl>
+        </div>
+        <aside class="video-card">
+          <p class="eyebrow">Walkthrough</p>
+          <h4>Video demonstration</h4>
+          <p>A short narrated tour of the Roota prototype and its core features.</p>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/joNYzxNZK2I?si=5kvDlLjwcaCLPurg" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <a class="play-btn" href="https://www.youtube.com/watch?v=joNYzxNZK2I" target="_blank" rel="noopener noreferrer">
+            <span class="tri"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+            Watch on YouTube
+          </a>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABSTRACT ============ -->
+<section id="abstract" class="band band-deep">
+  <div class="wrap">
+    <div class="abstract-grid">
+      <div class="reveal">
+        <p class="eyebrow">Abstract</p>
+        <div class="abstract-tags">
+          <span class="pill blue">10 interviews</span>
+          <span class="pill green">31 survey responses</span>
+          <span class="pill yellow">6 themes</span>
+          <span class="pill orange">6 evaluation participants</span>
+        </div>
+      </div>
+      <div class="abstract-body reveal" data-d="1">
+        <p><span class="drop">R</span>oota is a mobile concept designed to help newly immigrant families in Australia discover, understand, and confidently join local community activities. Drawing on 10 semi-structured interviews and 31 survey responses, the project found that participation is blocked less by missing information than by <em>uncertainty</em>: families struggle to judge whether an activity suits them, face language and social anxiety, and rely heavily on familiar networks. Roota responds with centralised activity browsing, richer activity details, a comic-style scenario simulation, social-safety cues, and a child-friendly Kids Mode. A formative evaluation with six families completed all five tasks — validating the concept while surfacing clear directions for refinement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research" class="band">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <p class="eyebrow">01 · Discover</p>
+      <h2>Understanding the journey from <em>knowing</em> to <em>joining</em>.</h2>
+      <p class="lead">A mixed-methods study explored how immigrant families find information about community activities, how they decide whether to take part, and what they experience when they do.</p>
+    </div>
+
+    <!-- methods -->
+    <div class="method-grid mt-l">
+      <div class="method-card reveal"><span class="mn">Qualitative</span><div class="mbig">10</div><h4>Semi-structured interviews</h4><p>Recruited through convenience and snowball sampling; analysed with thematic analysis (P1–P10).</p></div>
+      <div class="method-card reveal" data-d="1"><span class="mn">Quantitative</span><div class="mbig">31</div><h4>Survey responses</h4><p>Descriptive statistics on information sources, barriers, and English confidence supported the interviews.</p></div>
+      <div class="method-card reveal" data-d="2"><span class="mn">Synthesis</span><div class="mbig">∞</div><h4>Affinity mapping</h4><p>Quotes and data clustered into recurring patterns, then grouped into key barrier themes.</p></div>
+      <div class="method-card reveal" data-d="3"><span class="mn">Focus</span><div class="mbig">1</div><h4>Clear context</h4><p>Families with children participating in local community life — children often act as natural “cultural bridges” for their parents.</p></div>
+    </div>
+  </div>
+
+  <!-- stats band -->
+  <div class="band band-ink mt-l" style="padding-top:clamp(56px,7vw,92px);padding-bottom:clamp(56px,7vw,92px);margin-top:clamp(64px,8vw,110px);">
+    <div class="wrap">
+      <div class="section-title reveal" style="max-width:640px;">
+        <p class="eyebrow">By the numbers</p>
+        <h2>Information exists. Confidence doesn't.</h2>
+      </div>
+      <div class="stat-row mt-m">
+        <div class="stat reveal">
+          <div class="num"><span data-count="67">0</span><span class="pct">%</span></div>
+          <div class="lbl">rely on <strong>friends or other parents</strong> for activity information — far ahead of any official channel.</div>
+          <div class="src">Survey Q8 · n = 30</div>
+        </div>
+        <div class="stat reveal" data-d="1">
+          <div class="num"><span data-count="53">0</span><span class="pct">%</span></div>
+          <div class="lbl">cite <strong>language</strong> as a main barrier to taking part in community life.</div>
+          <div class="src">Survey Q9 · n = 30</div>
+        </div>
+        <div class="stat reveal" data-d="2">
+          <div class="num"><span data-count="63">0</span><span class="pct">%</span></div>
+          <div class="lbl">lack <strong>confidence communicating in English</strong> during community activities.</div>
+          <div class="src">Survey Q10 · n = 30</div>
+        </div>
+      </div>
+
+      <!-- charts -->
+      <div class="charts mt-l" data-bars>
+        <div class="chart reveal">
+          <h4>Where families find activity information</h4>
+          <p class="csub">Select all that apply · informal channels dominate</p>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Friends &amp; other parents</span><span class="bv">67%</span></div><div class="bar-track"><div class="bar-fill" data-w="67"></div></div></div>
+          <div class="bar-item"><div class="bar-head"><span class="bl">School or childcare</span><span class="bv">60%</span></div><div class="bar-track"><div class="bar-fill" data-w="60"></div></div></div>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Social media (WeChat, Facebook)</span><span class="bv">30%</span></div><div class="bar-track"><div class="bar-fill" data-w="30"></div></div></div>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Posters or flyers</span><span class="bv">27%</span></div><div class="bar-track"><div class="bar-fill" data-w="27"></div></div></div>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Local government websites</span><span class="bv">20%</span></div><div class="bar-track"><div class="bar-fill alt" data-w="20"></div></div></div>
+        </div>
+        <div class="chart reveal" data-d="1">
+          <h4>What makes participation difficult</h4>
+          <p class="csub">Select all that apply · barriers compound each other</p>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Language barriers</span><span class="bv">53%</span></div><div class="bar-track"><div class="bar-fill" data-w="53"></div></div></div>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Low confidence interacting</span><span class="bv">53%</span></div><div class="bar-track"><div class="bar-fill" data-w="53"></div></div></div>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Limited time</span><span class="bv">37%</span></div><div class="bar-track"><div class="bar-fill" data-w="37"></div></div></div>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Unfamiliar with the community</span><span class="bv">33%</span></div><div class="bar-track"><div class="bar-fill" data-w="33"></div></div></div>
+          <div class="bar-item"><div class="bar-head"><span class="bl">Difficulty finding information</span><span class="bv">30%</span></div><div class="bar-track"><div class="bar-fill" data-w="30"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- affinity -->
+  <div class="wrap mt-l">
+    <div class="lofi-grid">
+      <div class="reveal">
+        <p class="eyebrow">Affinity mapping</p>
+        <h3>From scattered voices to shared patterns.</h3>
+        <p class="lead" style="font-size:18px;">Interview quotes and survey data points were written onto digital sticky notes and clustered until the recurring tensions surfaced. Five clusters of lived experience emerged — about <em>finding</em>, <em>deciding</em>, <em>speaking</em>, <em>belonging</em>, and <em>capacity</em> — alongside a cluster of explicit unmet needs.</p>
+        <div class="abstract-tags">
+          <span class="pill">“No way to find out about these activities”</span>
+          <span class="pill">“My English isn't good enough, I'm afraid to speak”</span>
+          <span class="pill">“I'd rather participate with people I know”</span>
+        </div>
+      </div>
+      <figure class="figure boardpad reveal" data-d="1" style="margin:0;">
+        <img src="screens/affinity.jpg" alt="Affinity map: clusters of coloured sticky notes grouping interview quotes and survey data">
+      </figure>
+    </div>
+    <p class="figcaption reveal"><span class="fc-tag">Fig 1.</span> Affinity board — interview and survey insights clustered into experience groups.</p>
+  </div>
+
+  <!-- THEMES -->
+  <div class="wrap mt-l">
+    <div class="section-title reveal mb-m">
+      <p class="eyebrow">Six key themes</p>
+      <h2>The barriers form a chain.</h2>
+      <p class="lead">Fragmented information leads to cognitive uncertainty, which collides with language and social pressure — each link makes the next harder to cross.</p>
+    </div>
+    <div class="theme-grid">
+      <article class="theme-card reveal">
+        <span class="tbar" style="background:var(--c-blue)"></span>
+        <div class="tc-top">
+          <div class="tnum"><span class="tdot" style="background:var(--c-blue-ink)"></span>Theme 01</div>
+          <h3>Fragmented information access</h3>
+          <p>Activity information is scattered across schools, WeChat groups, social media and government sites, with no single entry point. Delivery is passive, not searchable.</p>
+        </div>
+        <div class="quote">“There is no way to know about these activities — I usually find out through school or friends.”<span class="who">Participant P1</span></div>
+      </article>
+
+      <article class="theme-card reveal" data-d="1">
+        <span class="tbar" style="background:var(--c-yellow)"></span>
+        <div class="tc-top">
+          <div class="tnum"><span class="tdot" style="background:var(--c-yellow-ink)"></span>Theme 02</div>
+          <h3>Decision-making difficulty</h3>
+          <p>Even when information is visible, families can't judge whether an activity suits them. Descriptions are brief, the process is unclear, and there's no basis for “is it worth it?”</p>
+        </div>
+        <div class="quote">“I'm not quite sure what this activity is for, so I won't consider joining.”<span class="who">Participant P5</span></div>
+      </article>
+
+      <article class="theme-card reveal" data-d="2">
+        <span class="tbar" style="background:var(--c-green)"></span>
+        <div class="tc-top">
+          <div class="tnum"><span class="tdot" style="background:var(--c-green-ink)"></span>Theme 03</div>
+          <h3>Language barriers</h3>
+          <p>Limited English confidence is more than a communication gap — it becomes pressure that holds families back even when they understand the activity.</p>
+        </div>
+        <div class="quote">“My English is not very good, so I don't dare to communicate.”<span class="who">Participant P3</span></div>
+      </article>
+
+      <article class="theme-card reveal">
+        <span class="tbar" style="background:var(--c-orange)"></span>
+        <div class="tc-top">
+          <div class="tnum"><span class="tdot" style="background:var(--c-orange-ink)"></span>Theme 04</div>
+          <h3>Social &amp; cultural anxiety</h3>
+          <p>Unfamiliar environments and cultural difference create a sense of risk. Families feel safer participating where someone is already known to them.</p>
+        </div>
+        <div class="quote">“Strangers make me feel pressured — I'd rather participate with people I know.”<span class="who">Survey &amp; interviews</span></div>
+      </article>
+
+      <article class="theme-card reveal" data-d="1">
+        <span class="tbar" style="background:var(--c-violet)"></span>
+        <div class="tc-top">
+          <div class="tnum"><span class="tdot" style="background:var(--c-violet-ink)"></span>Theme 05</div>
+          <h3>Limited participation capacity</h3>
+          <p>Work, childcare and low energy mean families won't actively search. Complex activities are abandoned; effort must be near-zero to convert interest into attendance.</p>
+        </div>
+        <div class="quote">“Limited time — we won't actively seek out activities.”<span class="who">Survey &amp; interviews</span></div>
+      </article>
+
+      <article class="theme-card reveal" data-d="2">
+        <span class="tbar" style="background:var(--c-pink)"></span>
+        <div class="tc-top">
+          <div class="tnum"><span class="tdot" style="background:var(--c-pink-ink)"></span>Theme 06</div>
+          <h3>Unmet needs</h3>
+          <p>Families asked, unprompted, for one integrated platform, clearer descriptions, recommendations, others' reviews, language support and reminders.</p>
+        </div>
+        <div class="quote">“I want a platform to integrate all activities — and clearer information about what to expect.”<span class="who">Open-ended survey</span></div>
+      </article>
+    </div>
+
+    <!-- theme boards -->
+    <p class="figcaption reveal mt-m" style="margin-bottom:14px;"><span class="fc-tag">Fig 2.</span> All six per-theme boards — ideas and the “How might we…” questions they generated.</p>
+    <div class="affinity-row">
+      <figure class="figure reveal" style="margin:0;"><img src="screens/theme1.jpg" alt="Theme board: Fragmented Information Access" class="zoomable"></figure>
+      <figure class="figure reveal" data-d="1" style="margin:0;"><img src="screens/theme2.jpg" alt="Theme board: Decision-Making Difficulty" class="zoomable"></figure>
+      <figure class="figure reveal" data-d="2" style="margin:0;"><img src="screens/theme3.jpg" alt="Theme board: Language Barriers" class="zoomable"></figure>
+      <figure class="figure reveal" style="margin:0;"><img src="screens/theme4.jpg" alt="Theme board: Social and Cultural Anxiety" class="zoomable"></figure>
+      <figure class="figure reveal" data-d="1" style="margin:0;"><img src="screens/theme5.jpg" alt="Theme board: Limited Participation Capacity" class="zoomable"></figure>
+      <figure class="figure reveal" data-d="2" style="margin:0;"><img src="screens/theme6.jpg" alt="Theme board: Unmet Needs" class="zoomable"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIGHTS · HMW + MATRIX ============ -->
+<section id="insights" class="band band-deep">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <p class="eyebrow">02 · Define</p>
+      <h2>Turning barriers into opportunities.</h2>
+      <p class="lead">Each theme was reframed as “How might we…” questions, then prioritised against importance and urgency to focus the design effort.</p>
+    </div>
+
+    <div class="hmw-list mt-l">
+      <div class="hmw reveal"><span class="hq">HMW</span><p>design a single, centralised place where families can find all community activity information?</p></div>
+      <div class="hmw reveal" data-d="1"><span class="hq">HMW</span><p>provide personalised activity recommendations that fit a family's children and interests?</p></div>
+      <div class="hmw reveal"><span class="hq">HMW</span><p>help parents understand what an activity actually involves <em>before</em> they attend?</p></div>
+      <div class="hmw reveal" data-d="1"><span class="hq">HMW</span><p>reduce language-related barriers when accessing and understanding activities?</p></div>
+      <div class="hmw reveal"><span class="hq">HMW</span><p>reduce social anxiety and help families feel comfortable in unfamiliar settings?</p></div>
+      <div class="hmw reveal" data-d="1"><span class="hq">HMW</span><p>help busy parents find suitable activities with minimal time and effort?</p></div>
+      <div class="hmw reveal"><span class="hq">HMW</span><p>surface reviews or shared experiences from other families to support decisions?</p></div>
+      <div class="hmw reveal" data-d="1"><span class="hq">HMW</span><p>support gradual, low-pressure social integration into the local community?</p></div>
+    </div>
+
+    <!-- matrix -->
+    <div class="matrix-wrap mt-l">
+      <div class="matrix reveal">
+        <span class="axis-y">Importance →</span>
+        <span class="axis-x">Urgency →</span>
+        <div class="matrix-field">
+          <span class="quad-label ql-tl">Plan for</span>
+          <span class="quad-label ql-tr">Do first</span>
+          <span class="quad-label ql-bl">Deprioritise</span>
+          <span class="quad-label ql-br">Quick wins</span>
+          <div class="dot high" style="left:84%;bottom:86%"><span class="d"></span><span class="dt">Centralised platform</span></div>
+          <div class="dot high" style="left:74%;bottom:80%"><span class="d"></span><span class="dt">Clearer details &amp; process</span></div>
+          <div class="dot high" style="left:60%;bottom:83%"><span class="d"></span><span class="dt">Language support</span></div>
+          <div class="dot high" style="left:80%;bottom:64%"><span class="d"></span><span class="dt">Reduce effort for busy parents</span></div>
+          <div class="dot mid" style="left:55%;bottom:58%"><span class="d"></span><span class="dt">Ease social anxiety</span></div>
+          <div class="dot mid" style="left:40%;bottom:55%"><span class="d"></span><span class="dt">Reviews &amp; experiences</span></div>
+          <div class="dot low" style="left:48%;bottom:33%"><span class="d"></span><span class="dt">Reminders</span></div>
+        </div>
+      </div>
+      <div class="matrix-legend reveal" data-d="1">
+        <div class="lg-item"><span class="lg-d" style="background:var(--amber)"></span><div><h4>Do first</h4><p>High importance, high urgency. Centralising information, clarifying activities, and lowering effort became the core of Roota.</p></div></div>
+        <div class="lg-item"><span class="lg-d" style="background:var(--c-blue-ink)"></span><div><h4>Important, less urgent</h4><p>Social comfort and peer reviews matter deeply but can build on the core experience.</p></div></div>
+        <div class="lg-item"><span class="lg-d" style="background:var(--muted)"></span><div><h4>Supporting</h4><p>Reminders and nudges add value once the essentials are in place.</p></div></div>
+        <p style="font-size:14px;color:var(--ink-soft);margin-top:6px;">The matrix concentrated effort on a small number of high-leverage moves — and directly shaped Roota's five core features.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESIGN ============ -->
+<section id="design" class="band">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <p class="eyebrow">03 · Design</p>
+      <h2>From paper sketches to a warm, working prototype.</h2>
+      <p class="lead">Low-fidelity wireframes mapped the core flows; a high-fidelity Figma prototype gave Roota its voice — calm, illustrated, and family-first.</p>
+    </div>
+
+    <div class="lofi-intro reveal mt-l">
+      <p class="eyebrow">Lo-fi → Hi-fi</p>
+      <h3>Structure first, polish second.</h3>
+      <p class="lead" style="font-size:18px;">Hand-drawn wireframes tested the skeleton of each screen — what information appears, in what order, and how families move from browsing to deciding, arriving, and checking in. Once the flow held together, a high-fidelity prototype layered in illustration, colour-coded suitability tags, and multilingual support.</p>
+      <div class="abstract-tags">
+        <span class="pill">Browse → Detail → Decide</span>
+        <span class="pill">Colour-coded suitability</span>
+        <span class="pill">Multilingual by default</span>
+      </div>
+    </div>
+
+    <div class="wire-gallery reveal" data-d="1">
+      <figure class="wcard"><div class="wimg" style="height: 255px"><span class="wstep">1</span><img src="screens/wire-home.png" alt="Lo-fi wireframe: home with search, filters, recommended and list" style="height: 235px"></div><figcaption>Browse &amp; discover</figcaption></figure>
+      <figure class="wcard"><div class="wimg" style="height: 255px"><span class="wstep">2</span><img src="screens/wire-detail.png" alt="Lo-fi wireframe: activity details with tags and 'what will happen today'" style="height: 235px"></div><figcaption>Activity details</figcaption></figure>
+      <figure class="wcard"><div class="wimg" style="height: 255px"><span class="wstep">3</span><img src="screens/wire-sim.png" alt="Lo-fi wireframe: BBQ party scenario simulation with choices" style="height: 235px"></div><figcaption>Scenario simulation</figcaption></figure>
+      <figure class="wcard"><div class="wimg" style="height: 255px"><span class="wstep">4</span><img src="screens/wire-map.png" alt="Lo-fi wireframe: explore map with activity pins" style="height: 235px"></div><figcaption>Explore map</figcaption></figure>
+      <figure class="wcard"><div class="wimg" style="height: 255px"><span class="wstep">5</span><img src="screens/wire-checkin.png" alt="Lo-fi wireframe: check-in screen with location detection" style="height: 235px"></div><figcaption>Arrive &amp; check in</figcaption></figure>
+      <figure class="wcard"><div class="wimg" style="height: 255px"><span class="wstep">6</span><img src="screens/wire-arrived.png" alt="Lo-fi wireframe: 'You're here' with points and leaderboard" style="height: 235px"></div><figcaption>Points &amp; rewards</figcaption></figure>
+      <figure class="wcard"><div class="wimg" style="height: 255px"><span class="wstep">7</span><img src="screens/wire-kids.png" alt="Lo-fi wireframe: Kids Mode home with Child Mode toggle" style="height: 235px"></div><figcaption>Kids Mode</figcaption></figure>
+    </div>
+    <p class="figcaption reveal" style="margin-top:18px;"><span class="fc-tag">Fig 3.</span> Low-fidelity wireframes mapping the end-to-end family journey — from discovery through arrival to the child-facing experience.</p>
+  </div>
+
+  <!-- art band -->
+  <div class="art-band reveal mt-l">
+    <img class="bg" src="screens/n15.png" alt="Storybook illustration from Roota's Kids Mode: a child and parent enjoying a sunny park">
+    <div class="scrim"></div>
+    <div class="wrap">
+      <blockquote>
+        <p>Information alone doesn't create belonging. Roota designs for the moment <em>after</em> you know — understanding, judging, and feeling ready to show up.</p>
+        <cite>The design principle behind Roota</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="wrap" style="padding-top:clamp(64px,8vw,100px);">
+    <div class="section-title reveal mb-m">
+      <p class="eyebrow">Core features</p>
+      <h2>Five moves that turn interest into attendance.</h2>
+    </div>
+  </div>
+
+  <!-- Feature 1: Browse -->
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-grid">
+        <div class="reveal">
+          <span class="feature-num">Feature 01</span>
+          <h3>Activity browsing, in one place</h3>
+          <p class="lead">A single home for everything happening nearby — replacing the scramble across schools, group chats and flyers.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>“Near you”</strong> activities, sorted by relevance and distance.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A <strong>“For you”</strong> shelf and quick category filters (Sport, Art, Games, Food).</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A one-tap language toggle — English / 中文.</span></li>
+          </ul>
+          <div class="feature-tags">
+            <span class="pill green">No English needed</span><span class="pill blue">Family welcome</span><span class="pill yellow">Beginner friendly</span>
+          </div>
+          <div class="lang-demo" id="lang-demo">
+            <span class="interactive-tag" style="margin-bottom:12px;">Live · tap a language</span>
+            <div class="lang-switch" id="lang-switch">
+              <button data-lang="en" class="on">EN</button>
+              <button data-lang="zh">中文</button>
+            </div>
+            <div class="lang-card" id="lang-card">
+              <div class="lc-title" id="lc-title"></div>
+              <div class="lc-sub" id="lc-sub"></div>
+              <div class="lc-tags" id="lc-tags"></div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-media reveal" data-d="1">
+          <div class="shot-pair">
+            <div class="shot shot--lead"><img src="screens/n16.png" alt="Roota home screen: greeting, search, category filters and a featured activity card"></div>
+            <div class="shot shot--trail"><img src="screens/n37.png" alt="Roota 'For you' list of recommended activities with suitability tags"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2: Details -->
+    <div class="feature">
+      <div class="feature-grid feature--rev">
+        <div class="reveal">
+          <span class="feature-num">Feature 02</span>
+          <h3>Activity details that support a decision</h3>
+          <p class="lead">Not just <em>what</em> the activity is, but whether it fits your family — and what will actually happen on the day.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>At-a-glance facts: date, location, cost and suitable ages.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A step-by-step <strong>“what will happen today”</strong> timeline.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Colour-coded suitability tags reduce guesswork for parents.</span></li>
+          </ul>
+          <div class="feature-tags"><span class="pill orange">Decision support</span><span class="pill">Closes the “is it worth it?” gap</span></div>
+        </div>
+        <div class="feature-media reveal" data-d="1">
+          <div class="shot-pair">
+            <div class="shot shot--lead"><img src="screens/n18.png" alt="Roota activity details with a 'what will happen today' timeline"></div>
+            <div class="shot shot--trail"><img src="screens/n44.png" alt="Roota activity details with a scheduling-clash check before committing"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3: Scenario simulation -->
+    <div class="feature">
+      <div class="feature-grid">
+        <div class="reveal">
+          <span class="interactive-tag">Try it yourself</span>
+          <span class="feature-num">Feature 03</span>
+          <h3>Scenario simulation</h3>
+          <p class="lead">A comic-style rehearsal of the social moments of an event — so the first time never feels like the first time. <strong>Make a choice on the right to play through it.</strong></p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Walk through arriving, first contact, joining in, and leaving.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Make choices and see warm, encouraging feedback.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Builds psychological expectations and reduces unfamiliarity.</span></li>
+          </ul>
+          <div class="feature-tags"><span class="pill green">No English needed</span><span class="pill yellow">“Like reading a comic” — P1</span></div>
+        </div>
+        <div class="feature-media reveal" data-d="1">
+          <div class="sim" id="sim">
+            <div class="sim-stage">
+              <div class="sim-progress" id="sim-progress"></div>
+              <img id="sim-img" src="screens/sim1.png" alt="Scenario illustration" class="show zoomable">
+            </div>
+            <div class="sim-body" id="sim-body">
+              <p class="sim-prompt" id="sim-prompt"></p>
+              <div class="sim-choices" id="sim-choices"></div>
+              <div class="sim-feedback" id="sim-feedback"></div>
+              <button class="btn btn-primary sim-next" id="sim-next">Next scene<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+            <div class="sim-result" id="sim-result">
+              <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <h4>Natural Connector</h4>
+              <p>You walked in like you belonged — and by the end, you did. Roota lets families rehearse these moments, so the first time never feels like the first time.</p>
+              <button class="btn btn-ghost" id="sim-restart">↺ Play again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 4: Friends Participate -->
+    <div class="feature">
+      <div class="feature-grid feature--rev">
+        <div class="reveal">
+          <span class="feature-num">Feature 04</span>
+          <h3>Friends Participate</h3>
+          <p class="lead">Social safety, made visible. Seeing a familiar face going lowers the threshold to attend.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>See who you know — and other families — attending.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Helpful tags: family details, languages spoken, dietary needs.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Leans on familiar networks — a key driver of whether families turn up.</span></li>
+          </ul>
+          <div class="feature-tags"><span class="pill blue">Social trust</span><span class="pill">“My vigilance drops a little” — P2</span></div>
+        </div>
+        <div class="feature-media reveal" data-d="1">
+          <div class="shot-pair">
+            <div class="shot shot--lead"><img src="screens/n35.png" alt="Roota 'Who's going' screen showing friends and families attending"></div>
+            <div class="shot shot--trail"><img src="screens/checkin1.png" alt="Roota check-in screen confirming attendance with friends"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 5: Kids Mode -->
+    <div class="feature">
+      <div class="feature-grid">
+        <div class="reveal">
+          <span class="interactive-tag">Flip the pages</span>
+          <span class="feature-num">Feature 05</span>
+          <h3>Kids Mode</h3>
+          <p class="lead">A picture-book version of the activity, so children can understand and get excited — in their own language of stories. <strong>Turn the pages of the storybook on the right.</strong></p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Warm, comic-style storytelling of what the day looks like.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Gentle badges celebrate participation, not addiction.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Lets children show interest; parents make the final call.</span></li>
+          </ul>
+          <div class="feature-tags"><span class="pill pink">Picture-book style</span><span class="pill">“The kind of style children love” — P1</span></div>
+        </div>
+        <div class="feature-media reveal" data-d="1">
+          <div class="flip" id="flip">
+            <div class="flip-stage">
+              <img src="screens/n10.png" class="show zoomable" alt="Kids Mode storybook: BBQ picnic at the park — cover">
+              <img src="screens/n11.png" class="zoomable" alt="Kids Mode storybook page">
+              <img src="screens/n12.png" class="zoomable" alt="Kids Mode storybook page">
+              <img src="screens/n13.png" class="zoomable" alt="Kids Mode storybook page">
+              <img src="screens/n14.png" class="zoomable" alt="Kids Mode storybook page: Mum makes a new friend">
+              <img src="screens/n15.png" class="zoomable" alt="Kids Mode storybook page: What a wonderful day">
+            </div>
+            <div class="flip-controls">
+              <button class="flip-btn" id="flip-prev" aria-label="Previous page" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+              <div class="flip-dots" id="flip-dots"></div>
+              <button class="flip-btn" id="flip-next" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- gallery strip -->
+  <div class="wrap mt-l">
+    <p class="eyebrow reveal">Beyond the core</p>
+    <h3 class="reveal mb-s" style="max-width:760px;">Maps, badges, points and a year-in-review keep families coming back.</h3>
+    <div class="gallery reveal">
+      <div class="g"><img src="screens/n28.png" alt="Welcome to your community onboarding screen"></div>
+      <div class="g"><img src="screens/n50.png" alt="Map view with activity pins around Melbourne"></div>
+      <div class="g"><img src="screens/n47.png" alt="My Badges achievement screen"></div>
+      <div class="g"><img src="screens/n61.png" alt="My Activities — saved and going"></div>
+      <div class="g"><img src="screens/points.png" alt="Points Center with rewards"></div>
+      <div class="g"><img src="screens/n56.png" alt="Your Year in Melbourne summary"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVALUATION ============ -->
+<section id="evaluation" class="band band-deep">
+  <div class="wrap">
+    <div class="eval-head">
+      <div class="section-title reveal" style="max-width:none;">
+        <p class="eyebrow">04 · Evaluate</p>
+        <h2>A formative test with six families.</h2>
+        <p class="lead">A think-aloud usability study with semi-structured interviews and behavioural observation, focused on whether Roota gives families enough information and confidence to consider participating.</p>
+      </div>
+      <div class="eval-stats reveal" data-d="1">
+        <div class="es"><div class="n">6</div><div class="l">participants</div></div>
+        <div class="es"><div class="n">5</div><div class="l">core tasks</div></div>
+        <div class="es"><div class="n">100<span style="font-size:.5em">%</span></div><div class="l">task completion</div></div>
+      </div>
+    </div>
+
+    <!-- tasks -->
+    <div class="tasks mt-l">
+      <div class="task reveal"><span class="tk-n">01</span><div class="tk-body"><h4>Browse community activities</h4><p>Find an activity of interest on the home screen.</p></div><span class="tk-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>6 / 6</span></div>
+      <div class="task reveal"><span class="tk-n">02</span><div class="tk-body"><h4>View activity details</h4><p>Describe what it is, who it suits, and what will happen.</p></div><span class="tk-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>6 / 6</span></div>
+      <div class="task reveal"><span class="tk-n">03</span><div class="tk-body"><h4>Experience scenario simulation</h4><p>Try the simulation and describe expectations for the event.</p></div><span class="tk-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>6 / 6</span></div>
+      <div class="task reveal"><span class="tk-n">04</span><div class="tk-body"><h4>Check Friends Participate</h4><p>See whether the social prompt affects the decision to join.</p></div><span class="tk-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>6 / 6</span></div>
+      <div class="task reveal"><span class="tk-n">05</span><div class="tk-body"><h4>Experience Kids Mode</h4><p>Explore the child-facing mode from a parent's perspective.</p></div><span class="tk-done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>6 / 6</span></div>
+    </div>
+
+    <!-- worked / improve -->
+    <div class="ww-grid mt-l">
+      <div class="ww-col worked reveal">
+        <h3><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--c-green-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>What worked</h3>
+        <p class="wc-sub">The concept and its emotional features resonated.</p>
+        <div class="ww-item"><h4>Scenario simulation reduced fear</h4><p>“It can greatly reduce my fear of this activity… the fear mainly comes from not understanding it” (P2). P1 likened it to a comic and a mini-game.</p></div>
+        <div class="ww-item"><h4>Friends Participate built social safety</h4><p>Seeing a known family going lowered participants' guard — “my vigilance will also drop a little” (P2).</p></div>
+        <div class="ww-item"><h4>Kids Mode delighted parents</h4><p>The picture-book style was seen as exactly what children would respond to (P1).</p></div>
+        <div class="ww-item"><h4>The aggregation concept landed</h4><p>An integrated platform was recognised as genuinely useful for time-poor families (P2, P3).</p></div>
+      </div>
+      <div class="ww-col improve reveal" data-d="1">
+        <h3><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--amber-deep)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>What needs improvement</h3>
+        <p class="wc-sub">Clear, actionable gaps surfaced across the prototype.</p>
+        <div class="ww-item"><h4>Activity details lack practical detail</h4><p>Families wanted check-in times, full address, parking, transport, and what to bring before committing.</p></div>
+        <div class="ww-item"><h4>Homepage discovery</h4><p>The “View all” link was easy to miss; activities felt few and recommendations under-personalised.</p></div>
+        <div class="ww-item"><h4>Simulation depth</h4><p>Choices didn't change outcomes; participants wanted branches and dynamic feedback.</p></div>
+        <div class="ww-item"><h4>Privacy &amp; labels</h4><p>The companion list needed visibility controls; labels like “Practice here” and “Let's go” were ambiguous.</p></div>
+      </div>
+    </div>
+
+    <!-- recommendations -->
+    <div class="section-title reveal mt-l mb-m" style="max-width:680px;">
+      <p class="eyebrow">Design recommendations</p>
+      <h2>Six directions for the next iteration.</h2>
+    </div>
+    <div class="rec-grid">
+      <div class="rec reveal"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h4>Sharpen discovery</h4><p>Make “View all” prominent, expand the activity set, and personalise the “For you” shelf by family interests.</p></div>
+      <div class="rec reveal" data-d="1"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div><h4>Detailed timeline &amp; prep</h4><p>Add arrival times, address, parking, transport, and a “what to bring” section to each event.</p></div>
+      <div class="rec reveal" data-d="2"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 9 9c-2 0-3-.5-4-1l-4 1 1-4c-.5-1-1-2-1-4z"/><path d="m9 11 2 2 4-4"/></svg></div><h4>Expand the simulation</h4><p>Let choices branch, add common social moments, and rename the entry to “Preview the activity”.</p></div>
+      <div class="rec reveal"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h4>Privacy in the companion list</h4><p>Clear “who can see my status” controls — show to friends, attending families, or keep private.</p></div>
+      <div class="rec reveal" data-d="1"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h4>Age-based Kids Mode</h4><p>Tailor content for 3–6, 7–9 and 10–12, add audio/animation, and a child lock with parent confirmation.</p></div>
+      <div class="rec reveal" data-d="2"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></div><h4>Balance the rewards</h4><p>Keep badges as gentle encouragement that supports understanding — never the main reason to open the app.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REFLECTION ============ -->
+<section id="reflection" class="band band-ink">
+  <div class="wrap">
+    <div class="reflection reveal">
+      <p class="eyebrow">05 · Reflect</p>
+      <p class="lead-q">The biggest lesson was that access to information is not the same as the ability to use it.</p>
+      <p>I began assuming the problem was discovery — that families simply couldn't find activities. The research reframed it. Families could often find <em>something</em>; what stopped them was uncertainty about whether it suited them, language and social pressure, and the absence of a familiar face. Good information design, I learned, has to support understanding, judgement and trust — not just presentation.</p>
+      <p>Working across interviews and a survey taught me to let qualitative depth and quantitative pattern check one another, and the formative evaluation reminded me that even a well-received concept hides concrete usability gaps. I'm also conscious of the study's limits: a small, predominantly Chinese-immigrant sample, a Figma prototype rather than a live product, and Kids Mode feedback gathered through parents rather than children. Future work should test with more diverse families and, ethically, with children themselves.</p>
+      <p class="sign">— Yani Xie, June 2026</p>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="wrap footer">
+    <div class="footer-grid">
+      <div>
+        <div class="fbrand">Roota</div>
+        <p>A master's thesis project on inclusive information design — helping newly immigrant families discover and join local community life in Australia.</p>
+      </div>
+      <div class="fmeta">
+        Yani Xie · June 2026<br>
+        The University of Melbourne · School of Computing and Information Systems<br>
+        Supervisor: Dr. Arzoo Atiq · Research collaboration: Zhe Xu<br>
+        <a href="https://www.youtube.com/watch?v=joNYzxNZK2I" target="_blank" rel="noopener noreferrer">Watch the video walkthrough →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <img id="lb-img" alt="">
+</div>
+
+<!-- ============ TWEAKS PANEL ============ -->
+<div id="tweaks-panel" aria-label="Tweaks">
+  <div class="tw-head">
+    <h4>Tweaks</h4>
+    <button class="tw-close" id="tw-close" aria-label="Close tweaks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="tw-body">
+    <div class="tw-group">
+      <div class="tw-label">Accent colour</div>
+      <div class="tw-swatches" id="tw-accent"></div>
+    </div>
+    <div class="tw-group">
+      <div class="tw-label">Display typeface</div>
+      <div class="tw-seg" id="tw-font">
+        <button data-font="Newsreader">Newsreader</button>
+        <button data-font="Lora">Lora</button>
+        <button data-font="'Source Serif 4'">Source</button>
+      </div>
+    </div>
+    <div class="tw-group">
+      <div class="tw-label">Paper tone</div>
+      <div class="tw-seg" id="tw-paper">
+        <button data-paper="warm">Warm</button>
+        <button data-paper="cool">Cool</button>
+        <button data-paper="bright">Bright</button>
+      </div>
+    </div>
+    <div class="tw-group">
+      <div class="tw-toggle">
+        <span>Scroll animations</span>
+        <button class="tw-sw on" id="tw-anim" role="switch" aria-checked="true"></button>
+      </div>
+      <div class="tw-hint">Customise the look of this report — changes are saved automatically.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Tweakable defaults — host rewrites this block on disk */
+window.ROOTA_TWEAKS = /*EDITMODE-BEGIN*/{
+  "accent": "#E0A23C",
+  "font": "Newsreader",
+  "paper": "warm",
+  "animations": false
+}/*EDITMODE-END*/;
+</script>
+<script src="script.js"></script>
+<script src="interactive.js"></script>
+</body>
+</html>
